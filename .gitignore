@@ -1,0 +1,19 @@
+# Archivos generados al compilar (se regeneran con 05_compilar_todo.bat)
+bin/
+dist/
+*.class
+
+# Librerias de terceros (se descargan con descargar_librerias.bat) y comun.jar generado
+lib/*.jar
+
+# Paquete para la otra PC (se genera con 09_empaquetar_cliente_otra_pc.bat)
+Paquete_Cliente/
+Paquete_Cliente.zip
+
+# Archivos temporales de Word / Windows / editores
+~$*
+*.tmp
+Thumbs.db
+desktop.ini
+.vscode/
+*.log

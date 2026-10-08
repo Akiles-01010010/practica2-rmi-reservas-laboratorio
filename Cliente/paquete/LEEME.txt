@@ -1,0 +1,24 @@
+PAQUETE CLIENTE - Practica 2 RMI (Reservas de Laboratorio)
+==========================================================
+Opcion B: red local. Esta PC y el servidor deben estar conectados
+al MISMO Wi-Fi / router. No se necesita Tailscale, MySQL ni Docker.
+
+Requisito: Java 17 o superior instalado (java -version).
+
+1. Doble clic en ejecutar_cliente.bat
+   Te pregunta la IP del servidor. Si das Enter usa la de servidor_ip.txt.
+   La IP correcta aparece en la ventana del servidor:
+      "IP anunciada a clientes : 192.168.x.x"
+   (Puede cambiar de un dia a otro: el router la asigna.)
+
+2. Prueba rapida de red (opcional, en PowerShell):
+      Test-NetConnection <IP_SERVIDOR> -Port 1099
+      Test-NetConnection <IP_SERVIDOR> -Port 1100
+   Ambos deben decir TcpTestSucceeded : True
+   Si dice False: revisar que esten en el mismo Wi-Fi, que el servidor
+   este encendido y que en el servidor se haya ejecutado
+   firewall_abrir_puertos_ADMIN.bat. Algunas redes Wi-Fi (escuelas)
+   bloquean el trafico entre equipos; en ese caso no hay conexion.
+
+Prueba de concurrencia entre dos PCs (misma hora en ambas):
+   prueba_concurrencia.bat 9 10 PCB 18:30:00
